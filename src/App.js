@@ -39,7 +39,6 @@ function App() {
     coinButtons.push(
       <button key={coinId} onClick={
       (ev) => {
-        console.log(coinData.id);
         getPriceOfCoin(coinData.id).then(local_data => {
           local_data.json().then(data => {
             if(data.length == 0) return;
